@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIREKNOCK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .formcontainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(https://wallpaperaccess.com/full/3239444.jpg);
+            
+        }
+
+        .formcontent {
+            width: 300px;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 4px black;
+            margin: 10%;
+        }
+        
+
+
+        input {
+            width: 250px;
+            height: 20px;
+        }
+
+        .loginbtn {
+            width: 250px;
+            height: 30px;
+            background-color: blue;
+        }
+
+        .button {
+            width: 100px;
+            height: 30px;
+            background-color: lightblue;
+        }
+
+        .btn {
+            width: 100px;
+            height: 30px;
+            background-color: firebrick;
+            margin-left: 4%;
+        }
+
+        .navbar-container {
+            width: 100%;
+            height: 80px;
+            padding-left: 10px;
+
+            margin-bottom: 10%;
+        }
+
+        ul>li {
+            display: inline-block;
+            padding-left: 4%;
+        }
+
+        ul>li:hover {
+            transform: scale(2, 2);
+        }
+
+        .resumebtn {
+            margin-left: 20%;
+            width: 100px;
+            height: 50px;
+            background-color: aquamarine;
+        }
+
+        .select {
+            background: none;
+            border: none;
+        }
+
+        .container {
+            background-image: url(https://directlinedev.com/media/services/service/background/background_11.wide.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80vh;
+            
+        }
+
+        .searchcontent {
+            margin-left: 10%;
+            font-size: 30px;
+            margin-bottom: 10%;
+
+        }
+
+        .serachbtn {
+            width: 800px;
+            height: 50px;
+            background-color: whitesmoke;
+            box-shadow: 7px 7px 7px transparent;
+            margin-left: 10%;
+            padding-left: 5%;
+        }
+
+        input {
+            width: 200px;
+            height: 40px;
+            border: none;
+        }
+
+        .cardcontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+        }
+
+        .card {
+            width: 200px;
+            height: 200px;
+            box-shadow: 2px 2px 2px lavender;
+
+        }
+
+        .img:hover {
+            transform: scale(2, 2);
+        }
+
+        .card:hover {
+            background-color: lightblue;
+            transform: scale(1, 1);
+        }
+
+        .demo {
+            width: 200px;
+            height: 40px;
+            margin-left: 40%;
+            margin-top: 5%;
+        }
+
+        .demo:hover {
+            transform: rotate(180deg);
+            background-color: mediumpurple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="formcontainer">
+    <div class="formcontent" id="loginform">
+        <h1 style="color: white;">LOGIN FORM</h1>
+        <form name="login-form">
+            <i class="fa-solid fa-user"></i> <input type="text" value="" placeholder="EMAIL OR PHONE"
+                id="l-email"><br><br>
+            <i class="fa-solid fa-lock"></i><input type="password" value="" placeholder=" password"
+                id="l-password"><br><br>
+            <div style="color: white;">FORGET PASSWORD?</div> <br><br>
+            <button class="loginbtn" id="login-btn" onclick="login(event)">LOGIN</button><br><br>
+            <div style="color: white;">OR LOGIN WITH</div><br><br>
+            <button class="button"><i class="fa-brands fa-facebook"></i>FACEBOOK</button>
+            <button class="btn"><i class="fa-brands fa-instagram"></i>INSTAGRAM</button><br><br>
+            <div style="color: white;">DONT HAVE AN ACCOUNT <a href="#">SIGNUP NOW</a></div>
+        </form>
+    </div>
+    <div id="signup-section">
+        <div class="formcontent">
+        <h1>Signup</h1>
+        <form>
+            <label>Email</label>
+            <input type="text" value="" placeholder="enter your email" id="s-email" /><br><br>
+            <label>password</label>
+            <input type="password" value="" placeholder="enter your password" id="s-password" /><br><br>
+            <button id="signup-btn" class="loginbtn" onclick="signup(event)">Signup</button>
+            <p>Alredy an account please <a href="#" onclick="goToLogin()">Login</a> here</p>
+        </form>
+    </div>
+    </div>
+    </div>
+    <div id="dashboard-section">
+        <div class="container">
+            <div class="navbar-container">
+                <nav>
+                    <ul type="none">
+                        <li style="font-size: 50px;"><img
+                                src="https://tse4.mm.bing.net/th?id=OIP.oOGiPJSba1njbxb7Hi2gXQHaHa&pid=Api&P=0&h=180"
+                                width="80px" height="60px" style="border-radius: 50px;">HIRE<span
+                                style="color: darkred;">KNOCK</span></li>
+                        <li><a><select class="select">
+                                    <option>HOME</option>
+                                </select></a></li>
+                        <li><a><select class="select">
+                                    <option>ABOUT</option>
+                                </select></a></li>
+                        <li><a><select class="select">
+                                    <option>BLOG</option>
+                                </select></a></li>
+                        <li><a><select class="select">
+                                    <option>CONTACT</option>
+                                </select></a></li>
+                        <button class="resumebtn"><i class="fa-solid fa-arrow-up-from-bracket"></i>UPLOAD
+                            RESUME</button>
+                        <i class="fa-solid fa-bell"></i>
+                    </ul>
+                </nav>
+            </div>
+        <h2>Hi, Welcome to job portal <span id="email-text"></span></h2>
+            <div class="searchcontent">
+                <h1>DISCOVER A NEW <span style="color: darkorchid;">CAREER</span><br>DESIGNED FOR YOU !</h1>
+                <div class="serachbtn">
+                    <input value="" type="text" placeholder="ex:web developer">
+                    <select style="width: 200px;height: 40px;border: none;">
+                        <option>CATEGORY</option>
+                    </select>
+                    <input value="" type="text" placeholder="LOCATION">
+                    <button style="background-color: green;width: 100px;height: 50px;">search</button>
+                </div>
+            </div>
+        </div>
+        <div class="jobscontent">
+            <div class="cardcontainer">
+                <div class="card">
+                    <img class="img"
+                        src="https://tse2.mm.bing.net/th?id=OIP.8pQXPa45aO85hgRSMSlxjQHaGb&pid=Api&P=0&h=180"
+                        width="100px" height="100px">
+                    <h4>IT SECTOR</h4>
+                    <h6>(200 OPENINGS)</h6>
+                </div>
+                <div class="card">
+                    <img class="img"
+                        src="https://tse4.mm.bing.net/th?id=OIP.68IYNvfE9kkMG1ULqJCVTgHaGR&pid=Api&P=0&h=180"
+                        width="100px" height="100px">
+                    <h4>ACCOUNTING & FINANCE</h4>
+                    <h6>(12 OPENINGS)</h6>
+                </div>
+                <div class="card">
+                    <img class="img"
+                        src="https://tse4.mm.bing.net/th?id=OIP.tAk2ZXuYgUjD-hla1-XXegHaEK&pid=Api&P=0&h=180"
+                        width="100px" height="100px">
+                    <h4>DESIGN & CREATIVE</h4>
+                    <h6>(20 OPENINGS)</h6>
+                </div>
+                <div class="card">
+                    <img class="img"
+                        src="https://tse4.mm.bing.net/th?id=OIP.U7_Q0Vj4fRmNAXfSMusIQwHaF7&pid=Api&P=0&h=180"
+                        width="100px" height="100px">
+                    <h4>EDUCATION & TRAINING</h4>
+                    <h6>(15 OPENINGS)</h6>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <div class="card">
+                    <img class="img"
+                        src="https://tse1.mm.bing.net/th?id=OIP.WQwk9g82PLU9NeR-FabztQHaHa&pid=Api&P=0&h=180"
+                        width="100px" height="100px">
+                    <h4>HOSPITAL & CLINIC</h4>
+                    <h6>(10 OPENINGS)</h6>
+                </div>
+                <div class="card">
+                    <img class="img"
+                        src="https://tse1.mm.bing.net/th?id=OIP.gwi77t0bCRR8ZLWdNcZDoQHaHa&pid=Api&P=0&h=180"
+                        width="100px" height="100px">
+                    <h4>CUSTOMER & CALLSUPPORT(BPO)</h4>
+                    <h6>(50 OPENINGS)</h6>
+                </div>
+                <div class="card">
+                    <img class="img"
+                        src="https://tse3.mm.bing.net/th?id=OIP.CnZC-y9h-Yjc2BGYfLov2gHaGj&pid=Api&P=0&h=180"
+                        width="100px" height="100px">
+                    <h4>CONSTRUCTION & BULIDERS</h4>
+                    <h6>(30 OPENINGS)</h6>
+                </div>
+                <div class="card">
+                    <img class="img"
+                        src="https://tse1.mm.bing.net/th?id=OIP.tnRgVhL28lmx_AuJkikwWgHaFj&pid=Api&P=0&h=180"
+                        width="100px" height="100px">
+                    <h4>TRAVEL & TOURAGENCY</h4>
+                    <h6>(20 OPENINGS)</h6>
+                </div>
+            </div>
+            <div class="demo">
+                Now Choose Your Career !
+            </div>
+        </div>
+    </div>
+    <script>
+        let signupDiv = document.getElementById("signup-section")
+        let loginDiv = document.getElementById("loginform")
+        let dashboardDiv = document.getElementById("dashboard-section")
+        dashboardDiv.style.display = "none"
+        loginDiv.style.display = "none"
+
+        function goToSignup() {
+            signupDiv.style.display = "block"
+            loginDiv.style.display = "none"
+            dashboardDiv.style.display = "none"
+        }
+
+        function goToLogin() {
+            loginDiv.style.display = "block"
+            signupDiv.style.display = "none"
+            dashboardDiv.style.display = "none"
+        }
+
+        function goToDashboard(email) {
+            loginDiv.style.display = "none"
+            signupDiv.style.display = "none"
+            dashboardDiv.style.display = "block"
+            let emailText = document.getElementById("email-text")
+            emailText.textContent = email
+            emailText.style.color = "red"
+            emailText.style.fontSize = "40px"
+        }
+
+        async function signup(e) {
+            e.preventDefault();
+            let email = document.getElementById("s-email").value;
+            let password = document.getElementById("s-password").value;
+            console.log(email, password)
+            await localStorage.setItem(email, password)
+            
+            goToLogin();
+  }
+
+        async function login(event) {
+            event.preventDefault()
+            let email = document.getElementById("l-email").value
+            let password = document.getElementById("l-password").value
+            let user = await localStorage.getItem(email)
+            if (!user) {
+                alert("user not found")
+            } else {
+                if (user === password) {
+                    alert("login success")
+                    localStorage.setItem("loggedInUser", email)
+                    goToDashboard(email)
+                } else {
+                    alert("invalid credentials")
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
